@@ -20,6 +20,9 @@
             }
         </style>
 
+        <!-- CSRFトークンの挿入を追加する -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         {{-- 下記を追加する --}}
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -133,6 +136,10 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
+
+                <!-- Veu.jsのサンプルコンポーネント（Example.js）を取り込む -->
+                <div id="example"></div>
+
             </div>
         </div>
     </body>
